@@ -1,0 +1,214 @@
+---
+title: "Guión (Final de BigData 2024)"
+format:
+  html:
+    theme: simplex #- minty zephyr yeti vapor united superhero(ok) solar (ok) slate sketchy simplex sandstone quartz pulse morph materia lux journal darkly cyborg cerulean     
+    toc: true
+    toc-location: left
+    toc-title: "Epígrafes a tratar:"
+    link-external-newwindow: true
+embed-resources: true
+fig-cap-location: top
+---
+
+
+```{r, include = FALSE}
+library(tidyverse)
+```
+  
+  
+# 0. Mensajes
+
+<br>
+  
+### 0a. Mensajes sobre los trabajos. Ánimo!!!
+
+- ¿Cómo van los trabajos?
+
+- Ánimo con ellos!!!! 🎨 🍀 🏁 No tienen que estar perfectos ... "decentes" sí.
+
+- Os tengo que confesar que tengo **un poco de miedo** de que los trabajos no lleguen a tiempo. Todos los años lo he tenido, pero quizás este año más ... ¿o es que ya no me acuerdo de los años anteriores? 🤔🤔
+
+- Mucha suerte en todo!!! 🤞 🤌🏽 🖖 😘 .
+
+
+
+<br>
+
+### 0b. Examen
+
+- Es muy pronto, justo el día después de Reyes: el 7 de enero a las 11:00 (aula 301). 
+
+- El examen será **presencial** y **con el ordenador**.
+
+
+- Os enviaré **instrucciones sobre el examen el día 2-3 de enero**. Tendréis que preparar un Qproject con las características que os diré para entregar el examen
+
+<br>
+
+### 0c. Me voy despidiendo
+
+
+- El curso se acaba ... 🏝️   🎸 💌 .🦎
+
+- Creo que ha salido [razonablemente bien]{.underline} para las condiciones que hemos tenido (DANA, clases online, ...)
+
+- Es una pena, pero hay **muuuuuuchas** cosas que no podremos ver, por ejemplo:
+
+
+  ```{r, eval = FALSE}
+    library(spotifyr)
+    NV <- get_artist_audio_features('nacho vegas')
+  ```
+
+
+- Espero que el curso os haya servido para iniciaros en R y **ojala le hayáis cogido un poco de cariño a R**: ojala os sirva en el futuro!!! 🤞🤞🤞
+
+
+<br>
+
+-----------------------
+
+<br>
+
+
+# 1. Plan de trabajo (tentativo)
+
+Nos quedan 2 semanas, 4 sesiones:
+
+
+## Martes (10 de diciembre)
+
+
+- Subir trabajos a Github
+
+- Uso de extensiones: haremos un póster
+
+- GIS (coropletas ....)
+
+
+<br>
+
+
+## Miércoles (11 de diciembre)
+
+
+- GIS (continuación)
+
+- Tablas 
+
+
+<br>
+
+## Martes (17 de diciembre)
+
+
+- Modelos estadísticos y presentación de resultados 
+
+
+- Ejemplo INE
+
+
+<br>
+
+## Miércoles (18 de diciembre)
+
+- EDA (Análisis Exploratorio de Datos)
+
+- Ejemplos más eclépticos
+
+
+<br>
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+<br>
+
+
+# 2. Trabajos en "equipo"
+
+<br>
+
+## Entendiendo/trabajando las plantillas
+
+- La plantilla la tenéis [aquí](https://github.com/perezp44/trabajo_BigData)
+
+- Vamos a trabajar con ellas un poco, así que descargadlas (otra vez) porque he modificado una cosita
+
+<br>
+
+## Subiendo los trabajos a Github
+
+- Se han de subir a Github **después de que el trabajo esté completamente acabado** 
+
+- Bosquejo del proceso:
+
+    - Entráis a Github con vuestro usuario y contraseña
+
+    - Crear un nuevo repo: `NEW` . Hay que ponerle **exactamente** el nombre `trabajo_BigData` 
+
+    - Vais subiendo los archivos (con `upload file`). Solo se pueden subir 100 archivos cada vez
+
+    - Finalmente hay que hacer que se pueda visualizar el trabajo en internet. Para ello hay que ir al repo de tu trabajo. Una vez allí, hay que ir a `Settings` y en la parte de abajo hay una sección que se llama `Pages`. Allí encontrarás una sección lalmada "Build and deployment". En esta sección hay que seleccionar `main` y `/root`  y darle a `Save`. En unos minutos el trabajo estará visible en internet en al dirección: `https://tu-usuario-Github.github.io/trabajo_BigData/`
+    
+    
+- Venga, **vamos a hacerlo**
+
+<br>
+
+## Para finalizar el trabajo en equipo
+
+
+- Una vez este el trabajo finalizado y visible en internet **tenéis que mandarme un mail** avisándome. 
+
+- La fecha límite de entrega será el **lunes 30 de diciembre** a las 23:59
+
+- El mail me lo tiene que mandar el capitán/capitana del equipo
+
+- El mail **tiene que ser** algo como:
+
+
+```{yaml}
+Asunto: BigData - trabajo - Nerea Pérez Mártinez
+
+Hola Pedro,
+soy Nerea Pérez Mártinez capitana del equipo compuesto por mi y Alex Abril Santana y Luis Goméz Saldaña.
+
+El título del trabajo es: Una aproximación empírica a los problemas económicos más tochos
+
+Mi usuario de Github es: nereaPM_99
+
+Por lo tanto, el párrafo que has de poner en la web de la asignatura para que puedas poner el enlace a nuestro trabajo es exactamente este:
+
+
+-   **Alex Abril Santana** y **Nerea Pérez Mártinez** presentaron el trabajo [Una aproximación empírica a los problemas económicos más tochos](https://nereaPM_99.github.io/trabajo_BigData/){target="_blank"}. El repo del trabajo está [aquí](https://github.com/nereaPM_99/trabajo_BigData){target="_blank"}.
+
+Pedro, he tenido mucho cuidado en cambiar el nombre de los integrantes del equipo, el título del trabajo y el usuario de Github en 2 sitios, así que debería funcionar tal cual.
+
+Saludos
+
+PD: Genial, lo hemos conseguido!!! ✅ 😊
+
+```
+
+
+<br>
+
+
+
+# 3. Extensiones de Quarto
+
+
+Quarto tiene **multitud de extensiones**. Documentación oficial [aquí](https://quarto.org/docs/extensions/starter-templates.html). [Aquí](https://quarto.org/docs/extensions/listing-filters.html) las extensiones oficiales. [Aquí](https://m.canouil.dev/quarto-extensions/) más extensiones. [Aquí](https://github.com/mcanouil/awesome-quarto) un lista awesome de Quarto, y [aquí](https://perezp44.github.io/intro.to.quarto.2024/blog/23_extensiones.html) un post
+
+### Un ejemplo
+
+- Vamos a usar la extensión [`poster`](https://github.com/quarto-ext/typst-templates/tree/main/poster) para crear un póster.
+
+
+<br>
+
+--------------------------
+
